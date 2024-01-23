@@ -1,0 +1,89 @@
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\lenovo\OneDrive\Documents\FPC\sem2\c_activity_sets\set01\a.exe...done.
+(gdb) b 10
+Breakpoint 1 at 0x40146e: file problem05.c, line 10.
+(gdb)
+Note: breakpoint 1 also set at pc 0x40146e.
+Breakpoint 2 at 0x40146e: file problem05.c, line 10.
+(gdb) n
+The program is not being run.
+(gdb) b 10
+Note: breakpoints 1 and 2 also set at pc 0x40146e.
+Breakpoint 3 at 0x40146e: file problem05.c, line 10.
+(gdb) r
+Starting program: C:\Users\lenovo\OneDrive\Documents\FPC\sem2\c_activity_sets\set01/a.exe
+[New Thread 12184.0x29d8]
+[New Thread 12184.0x9d0]
+
+Breakpoint 1, main () at problem05.c:10
+10          a = input();
+(gdb) step
+input () at problem05.c:22
+22          printf("enter number:");
+(gdb) n
+enter number:23     scanf("%d", &n);
+(gdb) n
+2
+24          return n;
+(gdb) n
+25      }
+(gdb) n
+main () at problem05.c:11
+11          b = input();
+(gdb) step
+input () at problem05.c:22
+22          printf("enter number:");
+(gdb) n
+enter number:23     scanf("%d", &n);
+(gdb) n
+1
+24          return n;
+(gdb) n
+25      }
+(gdb) n
+main () at problem05.c:12
+12          c = input();
+(gdb) step
+input () at problem05.c:22
+22          printf("enter number:");
+(gdb) n
+enter number:23     scanf("%d", &n);
+(gdb) n
+3
+24          return n;
+(gdb) n
+25      }
+(gdb) n
+main () at problem05.c:13
+13          largest = compare(a, b, c);
+(gdb) step
+compare (a=2, b=1, c=3) at problem05.c:30
+30          if (a >= b && a >= c)
+(gdb) n
+34          else if (b >= c)
+(gdb) n
+40              largest = c;
+(gdb) n
+42          return largest;
+(gdb) n
+43      }
+(gdb) n
+main () at problem05.c:14
+14          output(a, b, c, largest);
+(gdb) print largest
+$1 = 3
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 12184] will be killed.
+
+Quit anyway? (y or n) y
+error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5

@@ -1,0 +1,80 @@
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\lenovo\OneDrive\Documents\FPC\sem2\c_activity_sets\set01\a.exe...done.
+(gdb) b 17
+Breakpoint 1 at 0x4014c1: file problem03.c, line 17.
+(gdb) r
+Starting program: C:\Users\lenovo\OneDrive\Documents\FPC\sem2\c_activity_sets\set01/a.exe
+[New Thread 12360.0x2d24]
+[New Thread 12360.0x890]
+
+Breakpoint 1, input () at problem03.c:20
+20          printf("enter the number");
+(gdb) n
+enter the number21          scanf("%d",&n);
+(gdb) r
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5
+Starting program: C:\Users\lenovo\OneDrive\Documents\FPC\sem2\c_activity_sets\set01/a.exe
+[New Thread 12220.0x213c]
+[New Thread 12220.0x27d8]
+
+Breakpoint 1, input () at problem03.c:20
+20          printf("enter the number");
+(gdb) b 4
+Breakpoint 2 at 0x40146e: file problem03.c, line 4.
+(gdb) r
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5
+Starting program: C:\Users\lenovo\OneDrive\Documents\FPC\sem2\c_activity_sets\set01/a.exe 
+[New Thread 7304.0xf70]
+[New Thread 7304.0x9e8]
+
+Breakpoint 2, main () at problem03.c:9
+9           a=input();
+(gdb) step
+
+Breakpoint 1, input () at problem03.c:20
+20          printf("enter the number");
+(gdb) n
+enter the number21          scanf("%d",&n);
+(gdb) n
+2
+22          return n;
+(gdb) print n
+$1 = 2
+(gdb) n
+23      }
+(gdb) n
+main () at problem03.c:10
+10          b=input();
+(gdb) n
+
+Breakpoint 1, input () at problem03.c:20
+20          printf("enter the number");
+(gdb) n
+enter the number21          scanf("%d",&n);
+(gdb) n
+7
+22          return n;
+(gdb) n
+23      }
+(gdb) n
+main () at problem03.c:11
+11          sum=add(a ,b);
+(gdb) n
+12          output(a, b, sum);
+(gdb) step
+output (a=2, b=7, sum=9) at problem03.c:34
+34          printf("the sum of %d and %d is %d",a,b,sum);
+(gdb) n
+the sum of 2 and 7 is 935       }
