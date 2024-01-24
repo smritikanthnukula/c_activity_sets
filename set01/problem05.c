@@ -12,7 +12,6 @@ int main()
     c = input();
     largest = compare(a, b, c);
     output(a, b, c, largest);
-
     return 0;
 }
 
