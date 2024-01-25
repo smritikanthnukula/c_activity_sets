@@ -1,0 +1,120 @@
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\lenovo\OneDrive\Documents\FPC\sem2\c_activity_sets\set01\a.exe...done.
+(gdb) r
+Starting program: C:\Users\lenovo\OneDrive\Documents\FPC\sem2\c_activity_sets\set01/a.exe
+[New Thread 18352.0x40a8]
+[New Thread 18352.0x1b70]
+enter the number:49
+the square root of 49.000000 is 7.000000[Inferior 1 (process 18352) exited normally]
+(gdb) q
+PS C:\Users\lenovo\OneDrive\Documents\FPC\sem2\c_activity_sets\set01> gcc problem10.c -O0 -g
+problem10.c: In function 'main':
+problem10.c:9:24: warning: passing argument 1 of 'input_two_strings' from incompatible pointer type [-Wincompatible-pointer-types]
+     input_two_strings( &string1, &string2);
+                        ^
+problem10.c:3:6: note: expected 'char *' but argument is of type 'char (*)[100]'
+ void input_two_strings(char *string1, char *string2);
+      ^~~~~~~~~~~~~~~~~
+problem10.c:9:34: warning: passing argument 2 of 'input_two_strings' from incompatible pointer type [-Wincompatible-pointer-types]
+     input_two_strings( &string1, &string2);
+                                  ^
+problem10.c:3:6: note: expected 'char *' but argument is of type 'char (*)[100]'
+ void input_two_strings(char *string1, char *string2);
+      ^~~~~~~~~~~~~~~~~
+problem10.c:10:30: warning: passing argument 1 of 'stringcompare' from incompatible pointer type [-Wincompatible-pointer-types]
+     int result=stringcompare(&string1,&string2);
+                              ^
+problem10.c:4:5: note: expected 'char *' but argument is of type 'char (*)[100]'
+ int stringcompare(char *string1, char *string2);
+     ^~~~~~~~~~~~~
+problem10.c:10:39: warning: passing argument 2 of 'stringcompare' from incompatible pointer type [-Wincompatible-pointer-types]
+     int result=stringcompare(&string1,&string2);
+                                       ^
+problem10.c:4:5: note: expected 'char *' but argument is of type 'char (*)[100]'
+ int stringcompare(char *string1, char *string2);
+     ^~~~~~~~~~~~~
+problem10.c:11:12: warning: passing argument 1 of 'output' from incompatible pointer type [-Wincompatible-pointer-types]       
+     output(&string1,&string2,result);
+            ^
+problem10.c:5:6: note: expected 'char *' but argument is of type 'char (*)[100]'
+ void output(char *string1, char *string2, int result);
+      ^~~~~~
+problem10.c:11:21: warning: passing argument 2 of 'output' from incompatible pointer type [-Wincompatible-pointer-types]
+     output(&string1,&string2,result);
+                     ^
+problem10.c:5:6: note: expected 'char *' but argument is of type 'char (*)[100]'
+ void output(char *string1, char *string2, int result);
+      ^~~~~~
+problem10.c: In function 'stringcompare':
+problem10.c:25:25: warning: comparison between pointer and integer
+     for (i=0;string1[i] != "\0" && string2[i]!="\0" && string1[i]==string2[i] ; i++)
+                         ^~
+problem10.c:25:46: warning: comparison between pointer and integer
+     for (i=0;string1[i] != "\0" && string2[i]!="\0" && string1[i]==string2[i] ; i++)
+                                              ^~
+problem10.c: In function 'output':
+problem10.c:43:9: error: 'result' redeclared as different kind of symbol
+     int result;
+         ^~~~~~
+problem10.c:41:47: note: previous definition of 'result' was here
+ void output(char *string1, char *string2, int result)
+                                               ^~~~~~
+PS C:\Users\lenovo\OneDrive\Documents\FPC\sem2\c_activity_sets\set01> gcc problem10.c -O0 -g
+problem10.c: In function 'stringcompare':
+problem10.c:26:25: warning: comparison between pointer and integer
+     for (i=0;string1[i] != "\0" && string2[i]!="\0" && string1[i]==string2[i] ; i++);
+                         ^~
+problem10.c:26:46: warning: comparison between pointer and integer
+     for (i=0;string1[i] != "\0" && string2[i]!="\0" && string1[i]==string2[i] ; i++);
+                                              ^~
+problem10.c: In function 'output':
+problem10.c:42:9: error: 'result' redeclared as different kind of symbol
+     int result;
+         ^~~~~~
+problem10.c:40:47: note: previous definition of 'result' was here
+ void output(char *string1, char *string2, int result)
+                                               ^~~~~~
+PS C:\Users\lenovo\OneDrive\Documents\FPC\sem2\c_activity_sets\set01> gcc problem10.c -O0 -g
+problem10.c: In function 'stringcompare':
+problem10.c:26:25: warning: comparison between pointer and integer
+     for (i=0;string1[i] != "\0" && string2[i]!="\0" && string1[i]==string2[i] ; i++);
+                         ^~
+problem10.c:26:46: warning: comparison between pointer and integer
+     for (i=0;string1[i] != "\0" && string2[i]!="\0" && string1[i]==string2[i] ; i++);
+                                              ^~
+PS C:\Users\lenovo\OneDrive\Documents\FPC\sem2\c_activity_sets\set01> gcc problem10.c -O0 -g
+problem10.c: In function 'stringcompare':
+problem10.c:26:25: warning: comparison between pointer and integer
+     for (i=0;string1[i] != "\0" && string2[i] != "\0" && string1[i]==string2[i] ; i++);
+                         ^~
+problem10.c:26:47: warning: comparison between pointer and integer
+     for (i=0;string1[i] != "\0" && string2[i] != "\0" && string1[i]==string2[i] ; i++);
+                                               ^~
+PS C:\Users\lenovo\OneDrive\Documents\FPC\sem2\c_activity_sets\set01> gcc problem10.c -O0 -g
+PS C:\Users\lenovo\OneDrive\Documents\FPC\sem2\c_activity_sets\set01> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\lenovo\OneDrive\Documents\FPC\sem2\c_activity_sets\set01\a.exe...done.
+(gdb) r
+Starting program: C:\Users\lenovo\OneDrive\Documents\FPC\sem2\c_activity_sets\set01/a.exe
+[New Thread 16972.0x47f8]
+[New Thread 16972.0x3154]
+enter the value of first string :hello
+enter the value of second string:hellw
+hellw is greater than hello[Inferior 1 (process 16972) exited normally]
+(gdb)

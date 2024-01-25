@@ -25,9 +25,9 @@ Complex input_complex()
 {
     Complex c;
     printf("enter the real part of complex no:");
-    scanf("%f",c.real);
+    scanf("%f",&c.real);
     printf("enter the imaginary part of complex no:");
-    scanf("%f",c.imaginary);
+    scanf("%f",&c.imaginary);
     return c;
 }
 Complex add_complex(Complex a, Complex b)
@@ -39,5 +39,5 @@ Complex add_complex(Complex a, Complex b)
 }
 void output(Complex a, Complex b, Complex sum)
 {
-    printf("the sum of %f and %f is %f", a, b, sum);
+    printf("the sum is %f + %fi", sum.real ,sum.imaginary);
 }
