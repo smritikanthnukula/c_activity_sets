@@ -26,7 +26,7 @@ int stringcompare(char *string1, char *string2)
     for (i=0;string1 != "\0" && string2 != "\0" && string1[i]==string2[i] ; i++);
         if (string1[i]>string2[i])
         {
-            return 0;
+            return 0;   
         }
         else if (string1[i]< string2[i])
         {
