@@ -15,6 +15,8 @@ int main()
 }
 void input_two_strings(char *string1, char *string2)
 {
+    int x;
+    
     printf("enter the value of first string :");
     scanf("%s",string1);
     printf("enter the value of second string:");
