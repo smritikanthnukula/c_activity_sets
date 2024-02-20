@@ -1,32 +1,36 @@
 #include <stdio.h>
 int input();
-int find_fibo(int n);
+int find_n_fib(int n);
 void output(int n, int fibo);
 int main()
 {
-    int n,fibo;
-    n=input();
-    fibo=find_fibo(n);
+    int n, fibo;
+    n = input();
+    fibo = find_n_fib(n);
     output(n, fibo);
     return 0;
-
 }
 int input()
 {
     int n;
-    printf("enter the term :");
+    printf("enter the nth term:");
     scanf("%d",&n);
     return n;
 }
-int find_fibo(int n)
+int find_n_fib(int n)
 {
-    if (n<=0)
+    int a=0, b= 1, c= 0, i =0;
+    while (c<=n-2)
     {
-        return n;
-    }    
-      return find_fibo(n-1)+find_fibo(n-2);
+        i = a+b;
+        a=b;
+        b=i;
+        c++;
+    }
+    return i; 
+    
 }
 void output(int n, int fibo)
 {
-    printf("the %dth term in fibonacci series is %d",n,fibo);
+    printf("the %dth term is %d in fibonacci series.", n ,fibo);
 }
