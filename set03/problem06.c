@@ -29,12 +29,12 @@ int sub_str_index(char* string, char* substring)
     printf("%s",substring[i]);
     printf("%s",string[i]);
     
-    for (i=0;string[i] && substring[i];i++)
+    for (i=0;string[i];i++)
     {
-        
-        if (substring[i] == string[i])
+        printf("%s",string[i]);
+        if (string[i] == substring[0])
            {
-             return i;
+             return (string[i] :: substring[0]);
            }
     }
     return 0;
