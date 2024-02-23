@@ -22,26 +22,32 @@ void input_string(char* a, char* b)
 }
 int sub_str_index(char* string, char* substring)
 {
-    // printf("%s\n", string); 
-    // int l1 =0;
-    // l1 = strlen(string); 
-    int i;
-    printf("%s",substring[i]);
-    printf("%s",string[i]);
-    
-    for (i=0;string[i];i++)
+    int string_length;
+    int substring_length;
+    for (int i =0; substring[i] !='\0' && string_length[i]!='\0' ;i++)
     {
-        printf("%s",string[i]);
-        if (string[i] == substring[0])
-           {
-             return (string[i] :: substring[0]);
-           }
+        substring_length++;
+        string_length++;
+        printf("%d",substring_length);
+        printf("%d",string_length);
     }
-    return 0;
-    // int l2 = strlen(substring);
-    
+    int False = -1;
+    for (int i = 0; i <= string_length - substring_length; i++) {
+        int j;
+        for (j = 0; j < substring_length; j++) {
+            if (string[i + j] != substring[j]) {
+                break;
+            }
+        }
+        if (j == substring_length) {
+            return i; 
+        }
+    }
+    return False; 
 }
+
+
 void output(char* string, char* substring, int index)
 {
-     printf("the index of the string %s is %d",substring,index);
+    printf("the index of the string %s is %d",substring,index);
 }
