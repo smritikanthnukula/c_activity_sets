@@ -27,21 +27,21 @@ void input_array(int n, int a[n])
     int i;
     for (i=2;i<=n;i++)
     {
-        printf("%d\n",a[i]);
+        a[i]=i;
     }
 }
 void erotosthenes_sieve(int n, int a[n])
 {
-    // for (int i=2;i<=n;i++)
-    // {
-    //     if(i % n ==0)
-    //     {
-    //         a[i]=0;
-    //         printf("%d",&n);
-    //     }
-    // }
+    for (int i=2;i<=n;i++)
+    {
+        for(int j=2;i*j;j++)
+        {
+             
+            printf("%d",&n);
+        }
+    }
 }
 void output(int n, int a[n])
 {
-    // printf("the prime numbers till %d are:",n);
+    printf("the prime numbers till %d are:",n);
 }
