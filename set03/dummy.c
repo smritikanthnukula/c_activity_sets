@@ -43,7 +43,7 @@ void erotosthenes_sieve(int n, int a[n])
 }
 void output(int n, int a[n])
 {
-    printf("the prime numbers till are:");
+    printf("the prime numbers till %d are:",n);
     for (int i = 0; i <= n;i++)
     {
         if(a[i] != 0 && a[i] <= n)
