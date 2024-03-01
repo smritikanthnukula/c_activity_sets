@@ -10,13 +10,11 @@ int main()
     str_reverse(str,reverse_str);
     output(str,reverse_str);
     return 0;
-
 }
 void input_string(char *a)
 {
     printf("enter the word:");
     scanf("%s",a);
-     
 }
 void str_reverse(char *str, char *rev_str)
 {
@@ -25,16 +23,16 @@ void str_reverse(char *str, char *rev_str)
     {
         length++;
     }
-    int j;
-    for (int i = 0,  j = length - 1; i <= j; i++, j--) 
+    int j=length-1;
+    for (int i = 0; i <length; i++, length--) 
     { 
-        rev_str[i] = str[i]; 
-        str[i] = str[j]; 
-        str[j] = rev_str[i];
+        rev_str[i] = str[length]; 
+        // str[i] = str[j]; 
+        // str[j] = rev_str[i];
     }
 
 }
 void output(char *a, char *reverse_a)
 {
-    printf("the reversed string is %s",a);
+    printf("the reversed string is %s ",reverse_a);
 }
