@@ -33,7 +33,6 @@ void str_reverse(char *str, char *rev_str)
     rev_str[i] = str[(t-i)-1];
     // rev_str[i]=str[i];
     // printf("-%c  %c\n",str[i],str[(t-i)-1]);     
-
    }
 }
 void output(char *a, char *reverse_a)
