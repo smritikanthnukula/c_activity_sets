@@ -22,36 +22,29 @@ void input_string(char* a, char* b)
 }
 int sub_str_index(char* string, char* substring)
 {
-    void slice(const char* str, char* result, size_t start, size_t end)
-{
-    strncpy(result, str + start, end - start);
-}
-    // int string_length;
-    // int substring_length;
-    // for (int i =0; substring[i] !='\0' && string_length[i]!='\0' ;i++)
+    // void slice(const char* str, char* result, size_t start, size_t end)
+    // strncpy(result, str + start, end - start);
+    int i=0;
+    // int str_len=0;
+    // for ( i = 0; string[i] != '\0'; i++)
     // {
-    //     substring_length++;
-    //     string_length++;
-    //     printf("%d",substring_length);
-    //     printf("%d",string_length);
+    //     str_len++;
     // }
-    // int False = -1;
-    // for (int i = 0; i <= string_length - substring_length; i++) {
-    //     int j;
-    //     for (j = 0; j < substring_length; j++) {
-    //         if (string[i + j] != substring[j]) {
-    //             break;
-    //         }
-    //     }
-    //     if (j == substring_length) {
-    //         return i; 
-    //     }
-    // }
-    // return False; 
+    // printf("%d\n",str_len);
+    
+    // for ( i = 0; string[i] != '\0'; i++)
+    while(string[i]!='\0')
+    {
+       if(substring[i] == string[i])
+       {
+        return i;
+       } 
+      i++;
+    }
+    printf("%d\n",i);
+    
 }
-
-
 void output(char* string, char* substring, int index)
 {
-    printf("the index of the string %s is %d",substring,index);
+    printf("the index of the substring %s is %d",substring,index);
 }

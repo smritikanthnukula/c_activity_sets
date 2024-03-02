@@ -32,12 +32,18 @@ void input_array(int n, int a[n])
 }
 void erotosthenes_sieve(int n, int a[n])
 {
+    int j;
     for (int i=2;i<=n;i++)
-    {
-        for(int j=i+i;j<=n;j=j+i)
+    {   
+        for(int j=i*i;j<=n;j=j+i)
         {
             a[j]=0; 
+            if(a[j]!= 0)
+            {
+                continue;
+            }
         }
+         
     }
 }
 void output(int n, int a[n])
