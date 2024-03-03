@@ -24,7 +24,7 @@ int sub_str_index(char* string, char* substring)
 {
     // void slice(const char* str, char* result, size_t start, size_t end)
     // strncpy(result, str + start, end - start);
-    int i=0;
+    // int i=0;
     // int str_len=0;
     // for ( i = 0; string[i] != '\0'; i++)
     // {
@@ -33,6 +33,7 @@ int sub_str_index(char* string, char* substring)
     // printf("%d\n",str_len);
     
     // for ( i = 0; string[i] != '\0'; i++)
+    int i;
     while(string[i]!='\0')
     {
        if(substring[i] == string[i])
