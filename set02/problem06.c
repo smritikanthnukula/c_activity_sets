@@ -27,13 +27,15 @@ void str_reverse(char *str, char *rev_str)
     length++;
    }
    printf("%d\n",length);
+   int i;
    int t = length;
-   for (int i=0;i<length;i++)
+   for (i=0;i<length;i++)
    {
     rev_str[i] = str[(t-i)-1];
     // rev_str[i]=str[i];
     // printf("-%c  %c\n",str[i],str[(t-i)-1]);     
    }
+   rev_str[i] = '\0';
 }
 void output(char *a, char *reverse_a)
 {
